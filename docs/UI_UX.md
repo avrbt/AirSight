@@ -241,7 +241,7 @@ Screen: Overview Dashboard
 
 - **Figma Design Elements:** Build responsive elements with Auto Layout using variables to handle margins and paddings. Use primary components for button systems, map markers, and status indicators.
 
----
+---3
 
 *© 2026 AirSight AI. Internal UX Design Document.*  
 *Prepared for ET AI Hackathon 2026.*

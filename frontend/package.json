@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.50.1",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.8",
     "lucide-react": "^0.407.0",
@@ -19,10 +20,12 @@
     "react-dom": "^19.0.0-rc-0",
     "react-router-dom": "^6.24.1",
     "recharts": "^2.12.7",
-    "tailwind-merge": "^2.3.0",
+    "tailwind-merge": "^2.6.1",
+    "tailwindcss-animate": "^1.0.7",
     "zustand": "^4.5.4"
   },
   "devDependencies": {
+    "@types/node": "^26.1.1",
     "@types/react": "^19.0.0-rc.0",
     "@types/react-dom": "^19.0.0-rc.0",
     "@vitejs/plugin-react": "^4.3.1",
