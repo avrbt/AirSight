@@ -1,0 +1,43 @@
+Act as a Principal UI/UX Architect. Generate a high-fidelity, completely interactive, dark-themed 6-page dashboard system for "AirSight"—an advanced AI-powered Air Quality Index tracking, forecasting, and source attribution platform for a national hackathon. 
+
+---
+### 🛑 CRITICAL DIRECTIVE: MANDATORY INTERACTIVE LAYERS (ZERO STATIC BUTTONS)
+- EVERY SINGLE element intended for user interaction—including all primary CTAs, utility buttons, form inputs, navigation links, sidebar icons, close triggers, slider handles, dropdown rows, and tab pills—MUST be generated as an independent, fully pressable component layer.
+- Each interactive element must contain explicit Auto-Layout padding, visible borders or filled backgrounds, rounded corners (minimum 8px), and clearly distinguishable variants for [Default State], [Hover State], and [Pressed State]. 
+- Under no circumstances should simple plain text or un-encapsulated icons be used to represent a clickable action. If it can be interacted with, it MUST be wrapped in a visually distinct, styled clickable box or container.
+
+---
+### STRUCTURAL ARCHITECTURE & ALIGNMENT RULES
+1. ABSOLUTE ALIGNMENT & NO TEXT OVERLAP: Enforce rigid vertical and horizontal grid auto-layout containers with a minimum of 24px structural gap. Every single text heading, subheading, and label block must have a hardcoded, absolute bounding box and strict line-height spacing so that fonts NEVER collide, merge, or overlap vertically or horizontally.
+2. PROFESSIONAL THEME: Use a premium cyber-industrial dark aesthetic. Canvas Backdrop: Pitch Charcoal Blue (#070A12). Content Surfaces: Deep Slate Blue (#121826). Text: Pure White (#FFFFFF) and Slate Gray (#94A3B8). Dynamic accents must map to environmental hazard states: Safe Emerald (#10B981), Warning Amber (#F59E0B), Danger Crimson (#EF4444), and Critical Violet (#7C3AED).
+
+---
+### SYSTEM INTERFACES TO GENERATE (A TO Z ALL CLICKABLE)
+
+#### SECTION 1: DYNAMIC AUTHENTICATION ENTRYWAY (LOGIN & REGISTER GATE)
+- Implement a two-state master card layout split perfectly down the middle. Left side holds an abstract vector GIS telemetry node art piece. Right side houses the interactive authentication card.
+- Component Sub-Section A (Register/Sign-Up): Features three highly visible, clickable text input components for [Username Input Field], [Email Input Field], and [Secure Password Input Field] (complete with a pressable eye icon to show/hide text). Below them, a large, accent-colored, high-shadow [REGISTER ACCOUNT] submission CTA button. At the footer, a pressable hyperlinked text component: "Already registered? [SWITCH TO LOGIN]".
+- Component Sub-Section B (Login): Features identical matching input frames for [Username] and [Password], an interactive [Remember Me Checkbox] toggle component, a primary accent-filled [SECURE LOG IN] CTA button, and a pressable utility text trigger for "[Forgot Password?]".
+
+#### SECTION 2: LIVE AIRSIGHT ADVANCED CORE MONITORING DASHBOARD
+- Global Navigation Frame: Persistent left-aligned architectural sidebar featuring clear, individual, pressable structural block icons for each page route. Top banner contains an active, pressable [Location Selector Dropdown Menu] and a pressable [Profile Avatar Settings Engine] with a live [Alert Bell Notification Hub Button].
+- Central Interface Engine: A massive radial circular AQI monitoring gauge showing current air values. The entire gauge is wrapped inside a pressable container that opens deeper diagnostic tools on click.
+- Sub-Component Grid Matrix: A grid layout containing four individual pollutant monitor cards (PM2.5, PM10, NO2, SO2). Each card features its own dedicated, standalone, high-contrast pressable square button labeled with an icon for "[Open Micro-Analytics Window]".
+
+#### SECTION 3: IMMERSIVE GIS SPATIAL WARD MAP (GEOSPATIAL AREA)
+- Base Layer: Full-screen canvas displaying regional municipal ward divisions overlaying structural street mapping lines.
+- Left-Hand Panel: A vertical stack of pressable overlay controllers. Generates three distinctly checkable list items: [[ ] Toggle Heatmap Mode], [[ ] Toggle Active Sensor Nodes], and [[ ] Toggle Ward Boundaries]. Every line item box is an entirely pressable checkbox frame.
+- Chronological Scrubber Framework: A horizontal navigation track anchored at the viewport base. Includes standalone pressable media-control style buttons for [◀ REWIND], [⏸ PAUSE PREDICTION], [▶ PLAY SIMULATION], and [▶▶ FAST FORWARD], alongside a sliding node handle that is fully draggable to map real-time atmospheric shifts.
+
+#### SECTION 4: TIME-SERIES PREDICTIVE FORECASTING HUB
+- Primary Graph Architecture: A widescreen card element framing a deep line chart layout. Solid vector graphs represent historical readings, which then connect seamlessly into complex dotted-gradient timeline paths indicating AI-projected values.
+- Analytical Filter Sub-Section: A highly scannable filter toolbar situated directly above the chart layout. Includes a multi-option tab pill component where users can press individual blocks to filter periods: [24 Hours], [3 Days], [7 Days], or [30 Days]. Right-aligned features a pressable model-toggle button labeled "[Select Machine Learning Architecture ▾]" that expands a dropdown menu options list.
+
+#### SECTION 5: MACHINE LEARNING POLLUTANT ATTRIBUTION & TRANSPARENCY PLATFORM
+- Analytic Layout Structure: Two-column functional workspace visualizing XAI (Explainable AI) algorithms.
+- Left Container Component: A data-dense interactive donut chart mapping percentage impacts across operational sectors. Includes a corresponding legend table where every row item represents a filter toggle button that highlights the source when pressed.
+- Right Container Component: A full-width SHAP Force Plot graph containing positive/negative impact vectors. At the base of the framework, provide a row of clean, bordered rectangular utility buttons: a pressable [EXPORT DATASHEET] button and a pressable [FILTER ALGO FEATURES] button.
+
+#### SECTION 6: TARGETED EMERGENCY ALERT SIMULATION & RESPONSE STUDIO
+- Workspace Sub-Section A (Crisis Parameter Form): Contains operational dropdown buttons for [Select Targeted Ward/Zone], a smooth horizontal range slider handle component for selecting specific parts of the AQI threshold matrix, and individual interactive toggle components for notification channel targets: [Email Channel Toggle], [In-App System Toggle], and [Automated Webhook Relay Toggle].
+- Workspace Sub-Section B (Incident Log Matrix): A clean data table component listing threshold violations. Every single entry contains a standalone, high-contrast, crimson-filled pressable component action button explicitly labeled: "[DISPATCH CITIZEN ALERT BROADCAST]".
