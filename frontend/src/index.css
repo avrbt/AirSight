@@ -1,0 +1,429 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════
+ * AIRSIGHT AI — DESIGN SYSTEM: CSS CUSTOM PROPERTIES
+ * Government Intelligence Dashboard — Dark Theme First
+ *
+ * Palette: Deep navy canvas → blue brand accent → AQI spectrum
+ * Optimized for: GIS overlays, data density, low-light ops
+ * ═══════════════════════════════════════════════════════════════ */
+
+@layer base {
+
+  /* ─── LIGHT THEME (fallback — not primary) ─────────────── */
+  :root {
+    /* shadcn/ui semantic tokens – light baseline */
+    --background:           220 20% 97%;
+    --foreground:           222 47% 11%;
+    --card:                 0 0% 100%;
+    --card-foreground:      222 47% 11%;
+    --popover:              0 0% 100%;
+    --popover-foreground:   222 47% 11%;
+    --primary:              217 91% 60%;
+    --primary-foreground:   0 0% 100%;
+    --secondary:            220 14% 92%;
+    --secondary-foreground: 222 47% 11%;
+    --muted:                220 14% 92%;
+    --muted-foreground:     220 9% 46%;
+    --accent:               220 14% 92%;
+    --accent-foreground:    222 47% 11%;
+    --destructive:          0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border:               220 13% 87%;
+    --input:                220 13% 87%;
+    --ring:                 217 91% 60%;
+    --radius:               0.5rem;
+
+    /* Chart palette */
+    --chart-1:              217 91% 60%;
+    --chart-2:              152 69% 41%;
+    --chart-3:              39 95% 56%;
+    --chart-4:              280 65% 60%;
+    --chart-5:              340 75% 55%;
+
+    /* Sidebar */
+    --sidebar-background:           220 20% 97%;
+    --sidebar-foreground:           222 47% 11%;
+    --sidebar-primary:              217 91% 60%;
+    --sidebar-primary-foreground:   0 0% 100%;
+    --sidebar-accent:               220 14% 92%;
+    --sidebar-accent-foreground:    222 47% 11%;
+    --sidebar-border:               220 13% 87%;
+    --sidebar-ring:                 217 91% 60%;
+
+    /* AirSight canvas layers */
+    --canvas:               220 20% 97%;
+    --canvas-deep:          220 25% 94%;
+    --canvas-surface:       220 20% 97%;
+    --canvas-card:          0 0% 100%;
+    --canvas-elevated:      0 0% 100%;
+
+    /* Brand */
+    --brand:                213 100% 48%;
+    --brand-hover:          213 100% 42%;
+    --brand-muted:          213 100% 95%;
+    --brand-glow:           rgba(0, 112, 243, 0.08);
+
+    /* AQI severity spectrum (CPCB India) */
+    --aqi-good:                     152 100% 43%;
+    --aqi-good-muted:               rgba(0, 217, 126, 0.1);
+    --aqi-satisfactory:             72 75% 57%;
+    --aqi-satisfactory-muted:       rgba(184, 224, 69, 0.1);
+    --aqi-moderate:                 39 100% 56%;
+    --aqi-moderate-muted:           rgba(255, 176, 32, 0.1);
+    --aqi-poor:                     18 100% 60%;
+    --aqi-poor-muted:               rgba(255, 107, 53, 0.1);
+    --aqi-verypoor:                 355 76% 56%;
+    --aqi-verypoor-muted:           rgba(230, 57, 70, 0.1);
+    --aqi-severe:                   278 74% 46%;
+    --aqi-severe-muted:             rgba(155, 31, 202, 0.1);
+
+    /* Source attribution */
+    --source-vehicular:     212 100% 62%;
+    --source-industrial:    18 100% 60%;
+    --source-construction:  39 100% 56%;
+    --source-biomass:       355 76% 56%;
+    --source-dust:          216 18% 74%;
+
+    /* Signal / status */
+    --signal-success:       152 69% 41%;
+    --signal-warning:       39 100% 56%;
+    --signal-danger:        355 76% 56%;
+    --signal-info:          213 100% 48%;
+
+    /* Text hierarchy */
+    --text-primary:         222 47% 11%;
+    --text-secondary:       220 9% 46%;
+    --text-tertiary:        220 8% 65%;
+    --text-disabled:        220 6% 78%;
+  }
+
+
+  /* ─── DARK THEME (PRIMARY — Government Intelligence) ───── */
+  .dark {
+    /* shadcn/ui semantic tokens – dark */
+    --background:           222 47% 6%;
+    --foreground:           220 27% 94%;
+    --card:                 222 33% 10%;
+    --card-foreground:      220 27% 94%;
+    --popover:              222 40% 8%;
+    --popover-foreground:   220 27% 94%;
+    --primary:              213 100% 48%;
+    --primary-foreground:   0 0% 100%;
+    --secondary:            222 20% 14%;
+    --secondary-foreground: 220 20% 82%;
+    --muted:                222 16% 16%;
+    --muted-foreground:     218 14% 58%;
+    --accent:               222 20% 14%;
+    --accent-foreground:    220 27% 94%;
+    --destructive:          0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border:               222 20% 18%;
+    --input:                222 20% 18%;
+    --ring:                 213 100% 48%;
+
+    /* Chart palette – tuned for dark backgrounds */
+    --chart-1:              213 100% 55%;
+    --chart-2:              152 69% 45%;
+    --chart-3:              39 95% 58%;
+    --chart-4:              280 65% 65%;
+    --chart-5:              340 75% 58%;
+
+    /* Sidebar – deep navy panel */
+    --sidebar-background:           222 33% 10%;
+    --sidebar-foreground:           218 14% 58%;
+    --sidebar-primary:              213 100% 48%;
+    --sidebar-primary-foreground:   0 0% 100%;
+    --sidebar-accent:               222 20% 14%;
+    --sidebar-accent-foreground:    220 27% 94%;
+    --sidebar-border:               222 27% 17%;
+    --sidebar-ring:                 213 100% 48%;
+
+    /* ══════════════════════════════════════════════
+     * AIRSIGHT CANVAS LAYERS
+     * 4-tier depth hierarchy for spatial dashboards
+     *
+     * deep    → deepest map canvas backdrop
+     * surface → main page / dashboard background
+     * card    → panels and card containers
+     * elevated→ dropdowns, dialogs, hover states
+     * ══════════════════════════════════════════════ */
+    --canvas:               222 47% 7%;
+    --canvas-deep:          225 47% 5%;       /* #0B0F19 */
+    --canvas-surface:       222 37% 7%;       /* #121824 */
+    --canvas-card:          220 27% 10%;      /* #1A2333 */
+    --canvas-elevated:      219 26% 14%;      /* #232F45 */
+
+    /* Brand */
+    --brand:                213 100% 48%;     /* #0070F3 */
+    --brand-hover:          213 100% 55%;
+    --brand-muted:          213 100% 48%;
+    --brand-glow:           rgba(0, 112, 243, 0.15);
+
+    /* AQI severity spectrum — same hues, same values */
+    --aqi-good:                     152 100% 43%;     /* #00D97E */
+    --aqi-good-muted:               rgba(0, 217, 126, 0.10);
+    --aqi-satisfactory:             72 75% 57%;       /* #B8E045 */
+    --aqi-satisfactory-muted:       rgba(184, 224, 69, 0.10);
+    --aqi-moderate:                 39 100% 56%;      /* #FFB020 */
+    --aqi-moderate-muted:           rgba(255, 176, 32, 0.10);
+    --aqi-poor:                     18 100% 60%;      /* #FF6B35 */
+    --aqi-poor-muted:               rgba(255, 107, 53, 0.10);
+    --aqi-verypoor:                 355 76% 56%;      /* #E63946 */
+    --aqi-verypoor-muted:           rgba(230, 57, 70, 0.10);
+    --aqi-severe:                   278 74% 46%;      /* #9B1FCA */
+    --aqi-severe-muted:             rgba(155, 31, 202, 0.10);
+
+    /* Source attribution */
+    --source-vehicular:     212 100% 62%;     /* #3B9EFF */
+    --source-industrial:    18 100% 60%;      /* #FF6B35 */
+    --source-construction:  39 100% 56%;      /* #FFB020 */
+    --source-biomass:       355 76% 56%;      /* #E63946 */
+    --source-dust:          216 18% 74%;      /* #A8B8D0 */
+
+    /* Signal / status */
+    --signal-success:       152 100% 43%;
+    --signal-warning:       39 100% 56%;
+    --signal-danger:        355 76% 56%;
+    --signal-info:          213 100% 48%;
+
+    /* Text hierarchy – tuned for dark canvas */
+    --text-primary:         220 27% 94%;      /* #E8EDF5 → near-white */
+    --text-secondary:       216 18% 74%;      /* #A8B8D0 → subdued */
+    --text-tertiary:        218 12% 50%;      /* #6B7A90 → tertiary */
+    --text-disabled:        220 10% 35%;      /* #4A5568 → disabled */
+  }
+
+  /* ─── GLOBAL RESETS ────────────────────────────────────── */
+  * {
+    @apply border-border;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-canvas-surface text-text-primary antialiased overflow-x-hidden font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* ─── SCROLLBAR STYLING (dark theme) ───────────────────── */
+  ::-webkit-scrollbar {
+    @apply w-1.5 h-1.5;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full;
+    background: hsl(var(--canvas-elevated));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--text-tertiary));
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--canvas-elevated)) transparent;
+  }
+
+  /* ─── SELECTION ────────────────────────────────────────── */
+  ::selection {
+    background: hsl(var(--brand) / 0.3);
+    color: hsl(var(--text-primary));
+  }
+
+  /* ─── FOCUS RING (accessibility) ───────────────────────── */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+ * COMPONENT LAYER — Reusable utility classes
+ * ═══════════════════════════════════════════════════════════════ */
+
+@layer components {
+
+  /* ─── TYPOGRAPHY UTILITIES ────────────────────────────── */
+
+  .text-gradient-brand {
+    @apply bg-gradient-to-r from-blue-400 via-blue-300 to-indigo-300 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-warning {
+    @apply bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-danger {
+    @apply bg-gradient-to-r from-red-400 to-rose-400 bg-clip-text text-transparent;
+  }
+
+  /* ─── GLASS PANEL ─────────────────────────────────────── */
+
+  .glass-panel {
+    @apply bg-canvas-card/80 backdrop-blur-md border border-border rounded-lg;
+  }
+
+  .glass-panel-elevated {
+    @apply bg-canvas-elevated/80 backdrop-blur-lg border border-border/60 rounded-lg shadow-elevation-2;
+  }
+
+  /* ─── CARD PRESETS ────────────────────────────────────── */
+
+  .card-base {
+    @apply bg-canvas-card border border-border rounded-lg shadow-card;
+  }
+
+  .card-interactive {
+    @apply card-base transition-all duration-normal;
+    @apply hover:bg-canvas-elevated hover:shadow-card-hover hover:border-border/80;
+  }
+
+  .card-metric {
+    @apply card-base p-4;
+  }
+
+  .card-metric-glow {
+    @apply card-metric ring-1 ring-brand/20 shadow-glow-brand;
+  }
+
+  /* ─── AQI BADGE PRESETS ──────────────────────────────── */
+
+  .badge-aqi-good {
+    @apply bg-aqi-good-muted text-aqi-good border border-aqi-good/30 rounded-md px-2 py-0.5 text-caption font-medium;
+  }
+  .badge-aqi-satisfactory {
+    @apply bg-aqi-satisfactory-muted text-aqi-satisfactory border border-aqi-satisfactory/30 rounded-md px-2 py-0.5 text-caption font-medium;
+  }
+  .badge-aqi-moderate {
+    @apply bg-aqi-moderate-muted text-aqi-moderate border border-aqi-moderate/30 rounded-md px-2 py-0.5 text-caption font-medium;
+  }
+  .badge-aqi-poor {
+    @apply bg-aqi-poor-muted text-aqi-poor border border-aqi-poor/30 rounded-md px-2 py-0.5 text-caption font-medium;
+  }
+  .badge-aqi-verypoor {
+    @apply bg-aqi-verypoor-muted text-aqi-verypoor border border-aqi-verypoor/30 rounded-md px-2 py-0.5 text-caption font-medium;
+  }
+  .badge-aqi-severe {
+    @apply bg-aqi-severe-muted text-aqi-severe border border-aqi-severe/30 rounded-md px-2 py-0.5 text-caption font-medium;
+  }
+
+  /* ─── STATUS DOT ─────────────────────────────────────── */
+
+  .status-dot {
+    @apply inline-block w-2 h-2 rounded-full;
+  }
+  .status-dot-live {
+    @apply status-dot bg-signal-success animate-pulse-dot;
+  }
+  .status-dot-warning {
+    @apply status-dot bg-signal-warning animate-pulse-dot;
+  }
+  .status-dot-danger {
+    @apply status-dot bg-signal-danger animate-pulse-dot;
+  }
+
+  /* ─── SKELETON LOADER ────────────────────────────────── */
+
+  .skeleton {
+    @apply relative overflow-hidden rounded-md;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--canvas-card)) 0%,
+      hsl(var(--canvas-elevated)) 50%,
+      hsl(var(--canvas-card)) 100%
+    );
+    background-size: 200% 100%;
+    @apply animate-skeleton;
+  }
+
+  /* ─── DIVIDERS ───────────────────────────────────────── */
+
+  .divider {
+    @apply border-t border-border;
+  }
+  .divider-subtle {
+    @apply border-t border-border/50;
+  }
+
+  /* ─── GRID PRESETS ───────────────────────────────────── */
+
+  .grid-dashboard {
+    @apply grid grid-cols-dashboard gap-gutter;
+  }
+  .grid-metrics {
+    @apply grid grid-cols-metrics-4 gap-gutter;
+  }
+
+  /* ─── FOCUS STYLES ───────────────────────────────────── */
+
+  .focus-ring {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+ * UTILITY LAYER — Low-level helpers
+ * ═══════════════════════════════════════════════════════════════ */
+
+@layer utilities {
+
+  /* Hide scrollbars while keeping scroll functional */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Truncate multiline text */
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Tabular numbers for data displays */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* No text selection for interactive elements */
+  .no-select {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
